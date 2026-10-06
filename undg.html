@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Yanti & Asep</title>
+    
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Memanggil File CSS Terpisah -->
+    <link rel="stylesheet" href="undg.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <!-- COVER OVERLAY -->
+        <div class="cover-overlay" id="cover">
+            <p class="cover-title">Undangan Pernikahan</p>
+            <h1 class="cover-names">Yanti & Asep</h1>
+            <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+            <button class="btn-open" onclick="openInvitation()">
+                <i class="fa-solid fa-envelope-open"></i> Buka Undangan
+            </button>
+        </div>
+
+        <!-- MUSIC PLAYER -->
+        <div class="music-control" id="musicControl" onclick="toggleMusic()">
+            <i class="fa-solid fa-music"></i>
+        </div>
+        <audio id="bgMusic" loop>
+            <source src="MAPAG PANGANTEN - KAWIH SUNDA ALUS PISAN JUNG NANJUNG.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <p style="font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase;">The Wedding of</p>
+            <h1 class="hero-names">Yanti & Asep</h1>
+            <p class="hero-date">SABTU, 12 DESEMBER 2026</p>
+
+            <div class="countdown-container">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">00</span>
+                    <span class="countdown-label">Hari</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Jam</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Menit</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Detik</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- BRIDE & GROOM SECTION -->
+        <section>
+            <h2 class="section-title">Mempelai</h2>
+            <div class="section-divider"></div>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 30px;">
+                Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga perkenakanlah kami menyatukan dua putera-puteri kami:
+            </p>
+
+            <div class="couple-profile">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=300" alt="Romeo" class="profile-img">
+                <h3 class="profile-name">Asep</h3>
+                <p class="profile-parents">Putra dari Bapak Montague<br>& Ibu Montague</p>
+            </div>
+
+            <div class="and-symbol">&</div>
+
+            <div class="couple-profile">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=300" alt="Juliet" class="profile-img">
+                <h3 class="profile-name">Yanti</h3>
+                <p class="profile-parents">Putri dari Bapak Capulet<br>& Ibu Capulet</p>
+            </div>
+        </section>
+
+        <!-- EVENT DETAILS SECTION -->
+        <section style="background-color: var(--accent-soft);">
+            <h2 class="section-title">Rangkaian Acara</h2>
+            <div class="section-divider"></div>
+
+            <div class="event-card">
+                <h3 class="event-title">Akad Nikah</h3>
+                <div class="event-info"><i class="fa-regular fa-calendar"></i> Sabtu, 12 Desember 2026</div>
+                <div class="event-info"><i class="fa-regular fa-clock"></i> 08.00 - 10.00 WIB</div>
+                <div class="event-info"><i class="fa-solid fa-location-dot"></i> Masjid Agung Kota</div>
+                <a href="https://maps.google.com" target="_blank" class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Lihat Peta</a>
+            </div>
+
+            <div class="event-card">
+                <h3 class="event-title">Resepsi</h3>
+                <div class="event-info"><i class="fa-regular fa-calendar"></i> Sabtu, 12 Desember 2026</div>
+                <div class="event-info"><i class="fa-regular fa-clock"></i> 11.00 - 14.00 WIB</div>
+                <div class="event-info"><i class="fa-solid fa-location-dot"></i> Grand Ballroom Hotel Elegant</div>
+                <a href="https://maps.google.com" target="_blank" class="btn-map"><i class="fa-solid fa-map-location-dot"></i> Lihat Peta</a>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section>
+            <h2 class="section-title">Galeri Foto</h2>
+            <div class="section-divider"></div>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&q=80&w=400" class="gallery-item" alt="Gallery 1">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&q=80&w=400" class="gallery-item" alt="Gallery 2">
+                <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=400" class="gallery-item" alt="Gallery 3">
+                <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&q=80&w=400" class="gallery-item" alt="Gallery 4">
+            </div>
+        </section>
+
+        <!-- DIGITAL GIFT SECTION -->
+        <section style="background-color: var(--accent-soft);">
+            <h2 class="section-title">Amplop Digital</h2>
+            <div class="section-divider"></div>
+            <p style="font-size: 0.85rem; color: var(--text-light); margin-bottom: 25px;">
+                Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika Anda ingin memberi hadiah, kami menyediakan Amplop Digital di bawah ini:
+            </p>
+
+            <div class="bank-card">
+                <h4 style="color: var(--primary-color);">BANK BCA</h4>
+                <div class="account-number" id="rekening1">1234 5678 90</div>
+                <p style="font-size: 0.8rem; color: var(--text-light);">a.n. Romeo Montague</p>
+                <button class="btn-copy" onclick="copyText('rekening1')"><i class="fa-regular fa-copy"></i> Salin Nomor Rekening</button>
+            </div>
+
+            <div class="bank-card">
+                <h4 style="color: var(--primary-color);">BANK MANDIRI</h4>
+                <div class="account-number" id="rekening2">0987 6543 21</div>
+                <p style="font-size: 0.8rem; color: var(--text-light);">a.n. Juliet Capulet</p>
+                <button class="btn-copy" onclick="copyText('rekening2')"><i class="fa-regular fa-copy"></i> Salin Nomor Rekening</button>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p class="thanks">Terima Kasih</p>
+            <p style="font-size: 0.8rem; opacity: 0.8;">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+            <p style="margin-top: 20px; font-weight: 600;">Asep & Yanti</p>
+        </footer>
+    </div>
+
+    <!-- Memanggil File JavaScript Terpisah -->
+    <script src="undg.js"></script>
+</body>
+</html>
